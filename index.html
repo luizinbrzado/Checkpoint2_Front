@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/256fb4a9c2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <label for="tarefa">Tarefa:</label>
+            <input type="text" name="tarefa" id="tarefa" required>
+        </div>
+        <div>
+            <label for="data-criacao">Data de criação:</label>
+            <input type="datetime-local" name="data-criacao" id="data-criacao" disabled>
+        </div>
+        <div>
+            <label for="data-final">Data final:</label>
+            <input type="datetime-local" name="data-final" id="data-final" min="" required>
+        </div>
+        <button id="btn-enviar"><i class="fas fa-plus fa-sm"></i></button>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
