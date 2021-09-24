@@ -5,27 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tirar depois se não quiser usar os-->
     <script src="https://kit.fontawesome.com/256fb4a9c2.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>To Do - List</title>
 </head>
 
+<!--Tirar depois a classe loaded-->
+
 <body>
-    <div>
-        <div>
-            <label for="tarefa">Tarefa:</label>
-            <input type="text" name="tarefa" id="tarefa" required>
+
+    <main>
+        <div class="criar-tarefa">
+            <div>
+                <label for="tarefa">Tarefa:</label>
+                <input type="text" name="tarefa" id="tarefa">
+            </div>
+            <div>
+                <div>
+                    <label for="data-criacao">Data de criação:</label>
+                    <!--Trocar datetime-local para date apenas se quiser, mas terá de modificar a validação no js para ficar certinho no DOM-->
+                    <input type="datetime-local" name="data-criacao" id="data-criacao" disabled>
+                </div>
+                <div>
+                    <label for="data-final">Data final:</label>
+                    <input type="date" name="data-final" id="data-final">
+                </div>
+            </div>
+            <button id="btn-add"><i class="fas fa-plus fa-sm"></i></button>
         </div>
-        <div>
-            <label for="data-criacao">Data de criação:</label>
-            <input type="datetime-local" name="data-criacao" id="data-criacao" disabled>
+
+        <div class="todo-list">
+            <div class="todo" id="todo"></div>
+
+            <div class="todo" id="completed"></div>
         </div>
-        <div>
-            <label for="data-final">Data final:</label>
-            <input type="datetime-local" name="data-final" id="data-final" min="" required>
-        </div>
-        <button id="btn-enviar"><i class="fas fa-plus fa-sm"></i></button>
-    </div>
+    </main>
+
     <script src="./js/main.js"></script>
+
 </body>
 
 </html>
