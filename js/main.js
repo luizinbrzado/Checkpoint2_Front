@@ -14,13 +14,14 @@ window.onload = () => {
     tempoInput = setInterval(() => {
         let now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset())
-        dataCriacaoInput.value = now.toISOString().slice(0, -5);
+        dataCriacaoInput.value = now.toISOString().slice(0, -8);
     }, 200);
 }, carregarToDoNoDOM();
 
 btnAdd.addEventListener('click', () => {
+    if(dataFinalInput.value < dataCriacaoInput.value) return console.log("Meu amigo é um macacocaco");
     if (tarefaInput.value !== '' && dataCriacaoInput.value !== '' && dataFinalInput.value !== '') {
-        addTarefa(tarefaInput.value, dataCriacaoInput.value, dataFinalInput.value)
+        addTarefa(tarefaInput.value, dataCriacaoInput.value.replace(/-/g, '/').replace('T', ' '), dataFinalInput.value.replace('T', ' ').replace(/-/g, '/'))
     }
 })
 
