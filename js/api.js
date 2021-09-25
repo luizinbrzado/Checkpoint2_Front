@@ -1,6 +1,8 @@
 const pronto = document.querySelector('#pronto');
 const naumPronto = document.querySelector('#naumPronto');
-console.log(pronto);
+const voltar = document.querySelector('#voltar');
+
+
 const mostrarDados = (result) => {
     for (const campo in result) {
         console.log(result[campo]);
@@ -16,15 +18,7 @@ const mostrarDados = (result) => {
             naumPronto.innerHTML += card;
         }
 
-        /* function printarCard (){
-            const userId = 
-            const id =
-            const title =
-            const completed =
-        
-            
-        }
- */
+       
     }
 } 
 
@@ -44,8 +38,6 @@ function carregarApi(){
 }
 
 
-{/* <div class="card">
-                <h3></h3>
-                <h3></h3>
-                <p></p>
-            </div>     */}
+voltar.addEventListener('click', (e) => {
+    window.location.href = 'index.html';
+})

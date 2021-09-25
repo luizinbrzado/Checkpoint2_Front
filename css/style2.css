@@ -2,11 +2,15 @@
     background-color: rgb(53, 241, 116);
 
 }
+div a {
+    list-style: none;
+}
 
 body {
     display: flex;
     gap: 1rem;
     text-align: center;
+    justify-content: center;
 }
 
 .card{
@@ -18,3 +22,4 @@ body {
     height: 150px;
     text-align: left;
 }
+
